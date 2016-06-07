@@ -13,7 +13,7 @@ public class ntbItems {
 	public static Item cage_coin;
 	
 	public static void init() {
-		cage_coin = new Item().setCreativeTab(CreativeTabs.MISC).setMaxStackSize(64).setUnlocalizedName("cage_coin");
+		cage_coin = new Item().setCreativeTab(CreativeTabs.MISC).setMaxStackSize(32).setUnlocalizedName("cage_coin");
 	};
 	
 	public static void register() {
