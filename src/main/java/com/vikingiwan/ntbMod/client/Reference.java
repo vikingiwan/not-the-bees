@@ -1,5 +1,7 @@
 package com.vikingiwan.ntbMod.client;
 
+import net.minecraft.creativetab.CreativeTabs;
+
 public class Reference {
 	
 	public static final String MOD_ID = "NtbMod";
@@ -10,4 +12,9 @@ public class Reference {
 	
 	
 	public static final String LOG_PREF = "[NTB MOD] ";
+	
+	public static int GetNextAvailableTabIndex() {
+		return CreativeTabs.CREATIVE_TAB_ARRAY.length;
+	}
+	
 }

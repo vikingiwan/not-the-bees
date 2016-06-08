@@ -1,5 +1,6 @@
 package com.vikingiwan.ntbMod.init;
 
+import com.vikingiwan.ntbMod.client.NtbMod;
 import com.vikingiwan.ntbMod.client.Reference;
 
 import net.minecraft.client.Minecraft;
@@ -13,7 +14,7 @@ public class ntbItems {
 	public static Item cage_coin;
 	
 	public static void init() {
-		cage_coin = new Item().setCreativeTab(CreativeTabs.MISC).setMaxStackSize(32).setUnlocalizedName("cage_coin");
+		cage_coin = new Item().setCreativeTab(NtbMod.tabNTB).setMaxStackSize(32).setUnlocalizedName("cage_coin");
 	};
 	
 	public static void register() {

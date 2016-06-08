@@ -1,5 +1,6 @@
 package com.vikingiwan.ntbMod.client;
 import com.vikingiwan.ntbMod.init.ntbItems;
+import com.vikingiwan.ntbMod.init.ntbTab;
 import com.vikingiwan.ntbMod.proxy.CommonProxy;
 
 import jline.internal.Log;
@@ -16,6 +17,8 @@ public class NtbMod {
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide =  Reference.SERVER_PROXY_CLASS)
 	public static CommonProxy proxy;
+	
+	public static ntbTab tabNTB = new ntbTab(Reference.GetNextAvailableTabIndex(), "tabNTB");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
