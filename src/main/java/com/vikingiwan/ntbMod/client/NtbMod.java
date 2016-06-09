@@ -1,4 +1,5 @@
 package com.vikingiwan.ntbMod.client;
+import com.vikingiwan.ntbMod.init.ntbBlocks;
 import com.vikingiwan.ntbMod.init.ntbItems;
 import com.vikingiwan.ntbMod.init.ntbTab;
 import com.vikingiwan.ntbMod.proxy.CommonProxy;
@@ -25,6 +26,8 @@ public class NtbMod {
 		Log.info(Reference.LOG_PREF + "Hello MineCraft!");
 		ntbItems.init();
 		ntbItems.register();
+		ntbBlocks.init();
+		ntbBlocks.register();
 	}
 	
 	@EventHandler
