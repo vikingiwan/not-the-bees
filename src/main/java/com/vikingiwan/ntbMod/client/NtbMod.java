@@ -3,6 +3,7 @@ import com.vikingiwan.ntbMod.init.ntbBlocks;
 import com.vikingiwan.ntbMod.init.ntbItems;
 import com.vikingiwan.ntbMod.init.ntbTab;
 import com.vikingiwan.ntbMod.proxy.CommonProxy;
+import com.vikingiwan.ntbMod.world.ntbWorldGenerator;
 
 import jline.internal.Log;
 import net.minecraftforge.fml.common.Mod;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class NtbMod {
@@ -34,6 +36,7 @@ public class NtbMod {
 	public void Init(FMLInitializationEvent event) {
 		Log.info(Reference.LOG_PREF + "Getting some things ready...");
 		proxy.registerRenders();
+		GameRegistry.registerWorldGenerator(new ntbWorldGenerator(), 0);
 	}
 	
 	@EventHandler
