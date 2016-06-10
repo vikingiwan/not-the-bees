@@ -6,6 +6,7 @@ import com.vikingiwan.ntbMod.proxy.CommonProxy;
 import com.vikingiwan.ntbMod.world.ntbWorldGenerator;
 
 import jline.internal.Log;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -37,6 +38,13 @@ public class NtbMod {
 		Log.info(Reference.LOG_PREF + "Getting some things ready...");
 		proxy.registerRenders();
 		GameRegistry.registerWorldGenerator(new ntbWorldGenerator(), 0);
+		
+		/** Recipe testing */
+		//Creating Itemstacks
+		ItemStack cagecoinStack = new ItemStack(ntbItems.cage_coin);
+		ItemStack cageblockStack = new ItemStack(ntbBlocks.cage_block);
+		//Registering recipes
+		GameRegistry.addShapelessRecipe(cageblockStack, cagecoinStack, cagecoinStack, cagecoinStack, cagecoinStack, cagecoinStack, cagecoinStack, cagecoinStack, cagecoinStack, cagecoinStack);
 	}
 	
 	@EventHandler

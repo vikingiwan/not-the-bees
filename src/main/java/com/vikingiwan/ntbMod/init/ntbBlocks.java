@@ -20,6 +20,8 @@ public class ntbBlocks {
 	
 	public static void init() {
 		cage_block = new Block(Material.IRON, MapColor.GOLD).setCreativeTab(NtbMod.tabNTB).setUnlocalizedName("cage_block");
+		cage_block.setHardness(5.0f);
+		cage_block.setHarvestLevel("pickaxe", 2);
 	}
 	
 	public static void register() {
